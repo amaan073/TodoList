@@ -1,0 +1,158 @@
+:root {
+    --light : #edeef0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./images/bg.png");
+    background-clip: content-box;
+    background-attachment: fixed;
+}
+
+header {
+    margin: 50px 0;
+    padding: 0 30px;
+    text-align: center;
+    margin-top: 70px;;
+}
+
+
+.mainHeading {
+    font-size: clamp(1rem, 10vw, 3rem);
+    font-family: "Courgette", cursive;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.todo-app {
+    width: 100%; 
+    max-width: 540px;  /*so the width doesnt exceed more than 540px which half of the screen that way width will be 100% when screen smaller than 540px*/
+    background-color: white;
+    margin: 50px auto 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.taskInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light);
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 20px;
+    padding: 10px; 
+    margin: 7px 0;
+    font-weight: bold;  
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.taskInput>button {
+    border: none;
+    outline: none; 
+    background: transparent;
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.taskInput>button>svg {
+    height: 60px;
+    width: 60px;
+    fill: #007bff;
+    transition: all 0.2s ease-in;
+}
+
+.taskInput>button:hover>svg {
+    fill: #2464a9;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;  
+}
+
+li {
+    list-style-type: none;
+    margin-bottom:30px;
+    font-size: 20px; 
+    padding: 0 10px 0 40px;
+    position: relative;
+    cursor: pointer;
+    overflow-wrap: break-word;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li::before {
+    content: "";
+    position : absolute;
+    background-image: url(./images/unchecked.svg);
+    width: 28px;
+    height: 28px;
+    background-size: cover;  /*so svg dont repeat instead cover the whole background of this psuedo element*/
+    background-position: center;
+    left: 0px;
+    top : -2px;
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+/* when the checked class is applied on list this element will be applied too */
+li.checked::before {
+    background-image: url(./images/checked.svg);
+}
+
+.hidden {
+    display: none;
+}
+
+
+.dltBtn {
+    position: absolute; /*this will be positioned to the list element because the list element position is set to relative*/
+    right: 0; /*right 0 puts it right corner of the relative elment which is list*/
+    height: 28px;
+    width: 28px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+}
+
+.dltBtn:hover {
+    background-color: var(--light);
+    border-radius: 50%;
+}
+
+
+/*bug fix for small screen*/
+@media (max-width : 380px) {
+    input {
+        width:75%;
+    }
+    .taskInput>button {
+        position: relative;
+        
+    }
+}

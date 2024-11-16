@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+        
+        
+</head>
+<body style="font-family: 'Lato';">
+    
+    <header class="header">
+            <div class="mainHeading">TodoList🧾</div>
+    </header>
+
+    <main class="container">
+        <div class="todo-app">
+            <div class="taskInput">
+                <input type="text" id="inputField" placeholder="Add your task" focus>
+                <button onclick="addTask()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="taskList hidden">
+            </ul>
+        </div>
+    </main>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
