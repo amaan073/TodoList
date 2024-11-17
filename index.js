@@ -1,13 +1,3 @@
-// // list check uncheck 
-// const list = document.querySelectorAll("li");
-
-// list.forEach((li)=> {
-//     li.addEventListener("click", ()=> {
-//         li.classList.toggle("checked")
-//     })
-// })
-
-
 const inputField = document.querySelector("#inputField");
 const taskList = document.querySelector("ul.taskList");
 
@@ -17,7 +7,7 @@ inputField.addEventListener("keydown", (e)=>{
         addTask();
     }
 })
-//so browser gives focus to input field
+//focus on input field
 inputField.focus();  
 
 

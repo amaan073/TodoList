@@ -34,7 +34,7 @@ header {
 
 .todo-app {
     width: 100%; 
-    max-width: 540px;  /*so the width doesnt exceed more than 540px which half of the screen that way width will be 100% when screen smaller than 540px*/
+    max-width: 540px;  
     background-color: white;
     margin: 50px auto 20px;
     padding: 40px 30px;
@@ -110,7 +110,7 @@ li::before {
     background-image: url(./images/unchecked.svg);
     width: 28px;
     height: 28px;
-    background-size: cover;  /*so svg dont repeat instead cover the whole background of this psuedo element*/
+    background-size: cover;  
     background-position: center;
     left: 0px;
     top : -2px;
@@ -121,7 +121,7 @@ li::before {
     text-decoration: line-through;
 }
 
-/* when the checked class is applied on list this element will be applied too */
+
 li.checked::before {
     background-image: url(./images/checked.svg);
 }
@@ -132,8 +132,8 @@ li.checked::before {
 
 
 .dltBtn {
-    position: absolute; /*this will be positioned to the list element because the list element position is set to relative*/
-    right: 0; /*right 0 puts it right corner of the relative elment which is list*/
+    position: absolute; 
+    right: 0; 
     height: 28px;
     width: 28px;
     font-size: 22px;
@@ -147,7 +147,7 @@ li.checked::before {
 }
 
 
-/*bug fix for small screen*/
+
 @media (max-width : 380px) {
     input {
         width:75%;
